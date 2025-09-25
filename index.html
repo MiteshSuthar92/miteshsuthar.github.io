@@ -30,7 +30,7 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="fade-in">
+  <section id="about" class="fade-in light">
     <h2>About Me</h2>
     <p>
       Skilled Flutter Developer with 2.9 years of experience in mobile and web
@@ -42,7 +42,7 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="fade-in">
+  <section id="skills" class="fade-in dark">
     <h2>Key Skills</h2>
     <div class="skills-grid">
       <span>Flutter / Dart</span>
@@ -60,7 +60,7 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="fade-in">
+  <section id="experience" class="fade-in light">
     <h2>Work Experience</h2>
     <div class="timeline">
       <div>
@@ -79,27 +79,73 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="fade-in">
+  <section id="education" class="fade-in dark">
     <h2>Education</h2>
     <p>B.Tech in Information Technology – SAL College of Engineering, Ahmedabad (2023)</p>
     <p>Grade: 7.9/10</p>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="fade-in">
+  <section id="projects" class="fade-in light">
     <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="card"><h3>ULearn Teacher & Parent</h3><p>Attendance, chat, vendor map, real-time communication.</p></div>
-      <div class="card"><h3>Pondus</h3><p>Farm monitoring with real-time data, multi-shed graphs.</p></div>
-      <div class="card"><h3>Metamed</h3><p>Healthcare app with activity insights from Google Fit & HealthKit.</p></div>
-      <div class="card"><h3>Player Stat</h3><p>Tracks football player performance & progress analytics.</p></div>
-      <div class="card"><h3>U Eat</h3><p>Restaurant discovery, table booking & food ordering.</p></div>
-      <div class="card"><h3>DT Care (Doctor & Patient Apps)</h3><p>Appointments, chat, video call integration.</p></div>
+    <div class="projects-list">
+      <div class="project-card">
+        <h3>ULearn Teacher & Parent</h3>
+        <p class="short">A complete school platform for teachers, parents, and students.</p>
+        <button class="toggle-btn">View More</button>
+        <div class="details">
+          <ul>
+            <li>Attendance tracking & monthly reports</li>
+            <li>Real-time chat with Socket.IO</li>
+            <li>Class/group chats + media sharing</li>
+            <li>Vendor availability map integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Pondus</h3>
+        <p class="short">Farm monitoring & animal welfare app.</p>
+        <button class="toggle-btn">View More</button>
+        <div class="details">
+          <ul>
+            <li>Track food/water consumption</li>
+            <li>Animal mortality monitoring</li>
+            <li>Interactive graphs & shed filtering</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Metamed</h3>
+        <p class="short">Cross-platform healthcare app.</p>
+        <button class="toggle-btn">View More</button>
+        <div class="details">
+          <ul>
+            <li>Patient education videos</li>
+            <li>Appointment booking</li>
+            <li>Google Fit & Apple HealthKit integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>DT Care – Doctor & Patient Apps</h3>
+        <p class="short">Two apps for healthcare communication.</p>
+        <button class="toggle-btn">View More</button>
+        <div class="details">
+          <ul>
+            <li>Appointments & secure chat</li>
+            <li>Direct doctor-patient calls</li>
+            <li>Zego Video Call integration</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="fade-in">
+  <section id="contact" class="fade-in dark">
     <h2>Contact Me</h2>
     <p>📞 +91 7226835339</p>
     <p>📧 <a href="mailto:miteshsuthar2001@gmail.com">miteshsuthar2001@gmail.com</a></p>
@@ -115,31 +161,7 @@
     <p>© 2025 Mitesh Suthar | Built with ❤️ using GitHub Pages</p>
   </footer>
 
-  <!-- Smooth scroll + fade-in script -->
-  <script>
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
-        });
-      });
-    });
-
-    // Fade-in animation on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("appear");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => { appearOnScroll.observe(fader); });
-  </script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
